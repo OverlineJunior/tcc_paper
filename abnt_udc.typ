@@ -43,23 +43,42 @@
 ]
 
 #let capa(autor, titulo, local, data) = [
-  #set text(size: 16pt, weight: "bold")
+  #set par(justify: false)
+  #set text(size: 15pt, weight: "bold")
   #set align(center)
+  #set rect(width: 100%, height: 100%, stroke: none)
 
-  #upper("Centro Universitário Dinâmica das Cataratas\nCurso de Bacharelado em Ciência da Computação")
-  #v(6em)
-  #autor
-  #v(5em)
-  #box(height: 10em)[#titulo]
-  #v(13em)
+  #grid(
+    columns: 1,
+    rows: (5fr, 3.75fr, 10fr, 2fr),
+    rect[#upper("Centro Universitário Dinâmica das Cataratas\nCurso de Bacharelado em Ciência da Computação")],
+    rect[#autor],
+    rect[#titulo],
+    rect[#align(bottom)[#text(size: 12pt)[ #upper(local) \ #data]]],
+  )
 
-  #set text(size: 12pt)
-
-  #upper(local) \
-  #data
   #pagebreak()
 ]
 
-#let folha_de_rosto(autor, titulo, local, data) = [
-  
+#let folha_de_rosto(autor, titulo, orientador, local, data) = [
+  #set par(justify: false)
+  #set text(size: 15pt, weight: "bold")
+  #set align(center)
+  #set rect(width: 100%, height: 100%, stroke: none)
+
+  #grid(
+    columns: 1,
+    rows: (5fr, 3.75fr, 10fr, 2fr),
+    rect[#autor],
+    rect[#titulo],
+    grid(
+      columns: (1fr, 1fr),
+      rows: 1,
+      [],
+      rect[#align(horizon + left)[#text(size: 10pt)[Plano do Projeto da Disciplina de Projeto de Graduação I do Curso de Bacharelado em Ciência da Computação, apresentado à UDC como requisito parcial para obtenção do título de bacharel em Ciência da Computação. \ \ Orientador: #orientador]]],
+    ),
+    rect[#align(bottom)[#text(size: 12pt)[ #upper(local) \ #data]]],
+  )
+
+  #pagebreak()
 ]

@@ -3,13 +3,14 @@
 #show: abnt_udc
 
 #let autor = "Francisco Sebastiany Junior"
+#let orientador = "Prof. Me. Luciano S. Cardoso"
 #let titulo = "Design e Implementação de um Protótipo de Interpretador para uma Linguagem de Programação Orientada ao Entity Component System"
 #let local = "Foz do Iguaçu, PR"
 #let data = "2025"
 
 #capa(autor, titulo, local, data)
 
-#folha_de_rosto(autor, titulo, local, data)
+#folha_de_rosto(autor, titulo, orientador, local, data)
 
 = Introdução
 
