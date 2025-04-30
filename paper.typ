@@ -18,9 +18,9 @@
 
 == Contextualização
 
-Nos últimos anos, as empresas têm adotado novas abordagens para o desenvolvimento de software, especialmente as metodologias ágeis. Sabendo que tais metodologias favorecem a flexibilidade ao invés de planejamento rígido, vem a necessidade de um modelo arquitetural que permite uma adaptação rápida a novas demandas (AGILE ALLIANCE, 2001). Um dos modelos que atendem esses requisitos é o padrão arquitetural Entity Component System (ECS).
+Nos últimos anos, as empresas têm adotado novas abordagens para o desenvolvimento de software, especialmente as metodologias ágeis. Sabendo que tais metodologias favorecem a flexibilidade ao invés de planejamento rígido, vem a necessidade de um modelo arquitetural que permite uma adaptação rápida a novas demandas @agile. Um dos modelos que atendem esses requisitos é o padrão arquitetural Entity Component System (ECS).
 
-O padrão ECS surgiu na área de desenvolvimento de jogos, com um dos fatores sendo a alta necessidade de adaptação rápida na indústria. Por mais que ECS continue sendo majoritariamente aplicado em jogos, sua utilidade expande para qualquer aplicação que dependa fortemente de rápida iteração de desenvolvimento, flexibilidade ou performance (Willis, 2021).
+O padrão ECS surgiu na área de desenvolvimento de jogos, com um dos fatores sendo a alta necessidade de adaptação rápida na indústria. Por mais que ECS continue sendo majoritariamente aplicado em jogos, sua utilidade expande para qualquer aplicação que dependa fortemente de rápida iteração de desenvolvimento, flexibilidade ou performance @flightdynamics.
 
 Frequentemente, o padrão ECS é abstraído em forma de biblioteca, em uma determinada linguagem de programação. Isso é devido ao fato de que a implementação do padrão, principalmente de forma eficiente, é composta de vários detalhes técnicos, como a organização dos dados na memória (Mertens, 2024). Muitas vezes, tais detalhes são irrelevantes para o desenvolvedor, e por isso eles são ocultados pela interface da biblioteca.
 
@@ -44,10 +44,18 @@ Investigar como o design e a implementação de um protótipo de interpretador p
 
 == Justificativa
 
-Com o crescimento da adoção de metodologias ágeis pelas empresas, vem a demanda por arquiteturas que promovam flexibilidade no desenvolvimento de software (AGILE ALLIANCE, 2001). O padrão arquitetural entity component system tem se destacado por atender tais demandas, especialmente nas áreas de desenvolvimento de jogos e simulações.
+Com o crescimento da adoção de metodologias ágeis pelas empresas, vem a demanda por arquiteturas que promovam flexibilidade no desenvolvimento de software @flightdynamics. O padrão arquitetural entity component system tem se destacado por atender tais demandas, especialmente nas áreas de desenvolvimento de jogos e simulações.
 
 A maioria das abstrações feitas sobre ECS estão no formato de bibliotecas específicas para determinadas linguagens de programação, limitando a expressividade do desenvolvedor no processo de abstração.
 
 Dado isso, este trabalho propõe uma rota alternativa: a criação do design e implementação de uma linguagem de programação orientada a ECS. Com a capacidade de moldar a linguagem diante dos requisitos específicos do padrão ECS, essa rota propõe investigar e implementar abstrações que são difíceis ou até mesmo impossíveis de serem aplicadas em bibliotecas.
 
 = Fundamentação Teórica
+
+#pagebreak()
+
+#bibliography(
+	"refs.yml",
+	title: "Referências",
+	style: "associacao-brasileira-de-normas-tecnicas"
+)

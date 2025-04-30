@@ -1,0 +1,24 @@
+# https://github.com/typst/hayagriva/blob/main/docs/file-format.md
+
+flightdynamics:
+  type: Thesis
+  title: Two Published Flight Dynamics Models Rewritten in Rust and Structures as an ECS
+  author: [Willis, Chad A]
+  date: 2021
+  publisher:
+    name: Air Force Institute of Technology
+    location: Wright-Patterson Air Force Base, Ohio
+
+agile:
+  type: Article
+  title: The Agile Manifesto
+  author: Agile Aliance
+  date: 2001
+  url: https://www.agilealliance.org/agile101/the-agile-manifesto/
+
+flecs:
+  type: Repository
+  title: "Flecs: Fast Entity Component System"
+  author: Sander Mertens
+  date: 2019
+  url: https://github.com/SanderMertens/flecs

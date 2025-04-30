@@ -67,6 +67,19 @@
     )
   }
 
+  #show bibliography: it => [
+    #show heading: set align(center)
+
+    #show heading: it => [
+      #it
+      #v(1em)
+    ]
+
+    #it
+
+    #pagebreak()
+  ]
+
   #body
 ]
 
