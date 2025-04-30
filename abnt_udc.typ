@@ -130,3 +130,7 @@
 
   #pagebreak()
 ]
+
+#let todo(texto) = [
+  #box(fill: yellow, inset: 0.75em)[#text(fill: white)[*TODO!* #texto]]
+]

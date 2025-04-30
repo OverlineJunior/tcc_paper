@@ -1,3 +1,5 @@
+#import "../abnt_udc.typ": todo
+
 = Fundamentação Teórica
 
 O desenvolvimento deste trabalho será feito em quatro etapas cronológicas a fim de isolar os requisitos de cada uma. As etapas são descritas a seguir:
@@ -13,11 +15,15 @@ Dada a descrição das etapas de desenvolvimento, o próximo passo é detalhar o
 
 === Padrão de Projeto de Software
 
-TODO! Explicar Singleton.
+#todo("Explicar Singleton.")
 
 === Paradigma de Programação
 
+#todo("Explicar POO e funcional.")
+
 === Design Orientado a Dados
+
+#todo("Explicar structure of arrays and array of structures.")
 
 ===	Entity Component System
 
