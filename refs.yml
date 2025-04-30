@@ -36,6 +36,17 @@ bevy:
     value: https://github.com/bevyengine/bevy
     date: 2025-04-14
 
+thiserror:
+  type: Repository
+  title: "thiserror"
+  author:
+    name: David Tolnay
+    alias: dtolnay
+  date: 2019
+  url:
+    value: https://github.com/dtolnay/thiserror
+    date: 2025-04-30
+
 craftinginterpreters:
   type: Book
   title: Crafting Interpreters
@@ -52,6 +63,16 @@ rustbook:
   publisher:
     name: No Starch Press
     location: San Francisco, California
+
+pragmaticprogrammer:
+  type: Book
+  title: "The Pragmatic Programmer: Your Journey To Mastery"
+  author: [David Thomas, Andrew Hunt]
+  date: 2019
+  edition: 20th Anniversary Edition
+  publisher:
+    name: Addison-Wesley
+    location: Boston, Massachusetts
 
 ecsstorageinpics:
   type: Blog
