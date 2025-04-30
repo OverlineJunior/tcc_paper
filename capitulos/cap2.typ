@@ -11,18 +11,29 @@ Dada a descrição das etapas de desenvolvimento, o próximo passo é detalhar o
 
 == Fundamentos
 
+=== Padrão de Projeto de Software
+
+TODO! Explicar Singleton.
+
+=== Paradigma de Programação
+
+=== Design Orientado a Dados
+
 ===	Entity Component System
 
-Entity Component System (ECS) é um padrão arquitetural que surgiu na área de desenvolvimento de jogos, cuja natureza exige alto desempenho e flexibilidade. Por mais que o padrão continue sendo majoritariamente aplicado em jogos, sua utilidade expande para qualquer aplicação que dependa dos mesmos requisitos: alto desempenho e flexibilidade.
-O padrão ECS é composto de três elementos principais:
+Entity Component System (ECS) é um padrão arquitetural que surgiu na área de desenvolvimento de jogos, cuja natureza exige alto desempenho e flexibilidade, qualidades do padrão. Por mais que ECS continue sendo majoritariamente aplicado em jogos, sua utilidade expande para qualquer aplicação que dependa dos mesmos requisitos: alto desempenho e flexibilidade.
+
+O padrão ECS é composto de três elementos principais @bevy @flecs:
 
 - Entidades: identificadores únicos que representam os vários conceitos de uma aplicação. Sozinhas, as entidades não contêm dados nem funcionalidade;
 - Componentes: estruturas de dados que armazenam informações específicas. Uma entidade pode ter múltiplos componentes diferentes, definindo suas características;
-- Sistemas: funções responsáveis por processar sobre entidades com um determinado conjunto de componentes — processo denominado querying @bevy @flecs.
+- Sistemas: funções responsáveis por processar sobre entidades com um determinado conjunto de componentes — processo denominado querying.
+
+#figure(image("../imagens/diagrama_ecs.png", height: 35%), caption: "Relação entre entidades, componentes e sistemas no padrão ECS.")
 
 Adicionalmente, o padrão ECS costuma ser combinado com alguns outros elementos a fim de tornar o desenvolvimento mais prático:
 
-- Estado da Aplicação: estrutura de dados global. A fim de evitar a criação de entidades que atuam como singletons, aplicações estruturadas com ECS costumam possuir um estado global para armazenar dados que não se repetem;
+- Estado da Aplicação: estrutura de dados global. A fim de evitar a criação de entidades que atuam como _singletons_, aplicações estruturadas com ECS costumam possuir um estado global para armazenar dados que não se repetem;
 - Agendador: função ou objeto com a finalidade de agendar a ordem e frequência de execução de todos os sistemas, resolvendo dependência entre sistemas e tornando o ciclo de atualização da aplicação mais previsível;
 - Depurador: interface responsável por ajudar o desenvolvedor a encontrar e resolver bugs na aplicação. No contexto de ECS, o depurador pode examinar as entidades e seus respectivos componentes, além de listar os sistemas em execução e permitir o controle sobre eles.
 
@@ -35,6 +46,8 @@ A seguir estão as principais etapas que um interpretador tree-walking costuma i
 + Análise Léxica: transforma o código fonte em uma lista de tokens, que são estruturas de dados com a finalidade de armazenar informações sobre cada palavra da gramática da linguagem;
 + Análise Sintática: transforma a lista de tokens gerada pela análise léxica em uma árvore sintática abstrata (AST), que é uma árvore ordenada com a finalidade de representar a hierarquia estrutural do código de acordo com as regras gramaticais da linguagem;
 + Interpretação: percorre a AST gerada pela análise sintática, reduzindo expressões, atualizando o estado do programa e executando funções. Um interpretador mais completo adiaria esta etapa, antes fazendo a análise semântica, geração de código intermediário, entre outras etapas @craftinginterpreters.
+
+=== _Tracer Bullet_
 
 ==	Tecnologias
 
@@ -50,6 +63,6 @@ A linguagem de programação utilizada para o desenvolvimento do interpretador s
 
 O uso de bibliotecas que ajudam no desenvolvimento de interpretadores será proibido, assim cada processo de desenvolvimento do interpretador é estudado a fundo. Porém, algumas bibliotecas de uso geral serão utilizadas:
 
-- thiserror: reduz o boilerplate na definição de erros gerados pelo interpretador com o uso de macros.
+- thiserror: reduz o boilerplate na definição de erros gerados pelo interpretador com o uso de macros @thiserror.
 
 #pagebreak()
