@@ -82,3 +82,12 @@ ecsstorageinpics:
   url:
     value: https://ajmmertens.medium.com/building-an-ecs-storage-in-pictures-642b8bfd6e04
     date: 2025-02-22
+
+refactoringguru:
+  type: Article
+  title: Refactoring Guru
+  author: Alexander Shvets
+  date: 2018
+  url:
+    value: https://refactoring.guru/design-patterns
+    date: 2025-04-30
