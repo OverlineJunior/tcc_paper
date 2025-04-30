@@ -14,11 +14,50 @@ agile:
   title: The Agile Manifesto
   author: Agile Aliance
   date: 2001
-  url: https://www.agilealliance.org/agile101/the-agile-manifesto/
+  url:
+    value: https://www.agilealliance.org/agile101/the-agile-manifesto/
+    date: 2025-02-22
 
 flecs:
   type: Repository
   title: "Flecs: Fast Entity Component System"
   author: Sander Mertens
   date: 2019
-  url: https://github.com/SanderMertens/flecs
+  url:
+    value: https://github.com/SanderMertens/flecs
+    date: 2025-02-23
+
+bevy:
+  type: Repository
+  title: "Bevy: A refreshingly simple data-driven game engine built in Rust"
+  author: Bevy Foundation
+  date: 2020
+  url:
+    value: https://github.com/bevyengine/bevy
+    date: 2025-04-14
+
+craftinginterpreters:
+  type: Book
+  title: Crafting Interpreters
+  author: Robert Nystrom
+  date: 2021
+  publisher: Genever Benning
+
+rustbook:
+  type: Book
+  title: The Rust Programming Language
+  author: [Steve Klabnik, Carol Nichols]
+  date: 2022
+  edition: 2nd
+  publisher:
+    name: No Starch Press
+    location: San Francisco, California
+
+ecsstorageinpics:
+  type: Blog
+  title: ECS Storage in Pictures
+  author: Sander Mertens
+  date: 2024
+  url:
+    value: https://ajmmertens.medium.com/building-an-ecs-storage-in-pictures-642b8bfd6e04
+    date: 2025-02-22
