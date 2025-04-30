@@ -57,7 +57,7 @@ A seguir estão as principais etapas que um interpretador tree-walking costuma i
 
 ==	Tecnologias
 
-===	Linguagem de Programação
+===	Rust
 
 A linguagem de programação utilizada para o desenvolvimento do interpretador será Rust. A motivação por trás da escolha se dá pelos seguintes fatos:
 
@@ -65,7 +65,9 @@ A linguagem de programação utilizada para o desenvolvimento do interpretador s
 - O tratamento de erros é explícito, indicando com clareza quais partes do código precisam ser tratadas adequadamente. Todas as fases de um interpretador estão sujeitas a erros, e por isso, tratá-los do jeito mais claro possível é benéfico para o estudo do código;
 - Possui alto desempenho, muitas vezes comparado ao de C. Desempenho é importante não só para ECS em si, mas também para qualquer interpretador, minimizando o tempo que o desenvolvedor espera pela execução de seu código @rustbook.
 
-===	Bibliotecas
+===	Cargo
+
+#todo("Explicar o que é e como funciona.")
 
 O uso de bibliotecas que ajudam no desenvolvimento de interpretadores será proibido, assim cada processo de desenvolvimento do interpretador é estudado a fundo. Porém, algumas bibliotecas de uso geral serão utilizadas:
 
