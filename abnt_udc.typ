@@ -80,6 +80,13 @@
     #pagebreak()
   ]
 
+  #set figure(supplement: [Figura])
+
+  #show figure: it => [
+    #it
+    #v(1em)
+  ]
+
   #body
 ]
 
