@@ -12,6 +12,8 @@
 
 #folha_de_rosto(autor, titulo, orientador, local, data)
 
+#outline(title: "Sumário")
+
 = Introdução
 
 == Contextualização

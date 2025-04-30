@@ -39,6 +39,34 @@
     leading: 1.5em,
   )
 
+  #show outline: it => [
+    #set outline(indent: 0pt)
+    #show heading: set heading(outlined: false)
+    #show heading: set align(center)
+
+    #show heading: it => [
+      #it
+      #v(1em)
+    ]
+
+    #it
+
+    #pagebreak()
+  ]
+
+  #show outline.entry: it => {
+    set text(weight: "bold") if it.level <= 2
+
+    if it.level == 1 {
+      v(par.spacing, weak: true)
+    }
+
+    link(
+      it.element.location(),
+      it.indented(box(width: 2.5em, it.prefix()), it.inner()),
+    )
+  }
+
   #body
 ]
 
