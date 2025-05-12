@@ -76,8 +76,6 @@
     ]
 
     #it
-
-    #pagebreak()
   ]
 
   #set figure(supplement: [Figura])
