@@ -14,7 +14,7 @@
   )
 
   #show heading: it => [
-    #set block(below: 1em, above: 1.5em)
+    #set block(below: 1.5em, above: 1.5em)
 
     #if it.level == 1 [
       #set text(weight: "bold")
@@ -79,6 +79,11 @@
   ]
 
   #set figure(supplement: [Figura])
+
+  #show figure: it => [
+    #set par(leading: 1em, justify: false)
+    #it
+  ]
 
   #set figure.caption(
     separator: [. ]
