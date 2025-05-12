@@ -1,6 +1,8 @@
 #import "abnt_udc.typ": abnt_udc, capa, folha_de_rosto
+#import "@preview/codly:1.3.0": codly-init
 
 #show: abnt_udc
+#show: codly-init.with()
 
 #let autor = "Francisco Sebastiany Junior"
 #let orientador = "Prof. Me. Luciano S. Cardoso"
