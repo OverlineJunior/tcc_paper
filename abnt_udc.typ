@@ -82,9 +82,13 @@
 
   #set figure(supplement: [Figura])
 
-  #show figure: it => [
-    #it
-    #v(1em)
+  #set figure.caption(
+    separator: [. ]
+  )
+
+  #show figure.caption: c => [
+    #let count = context c.counter.display(c.numbering)
+    *#c.supplement #count*#c.separator#c.body
   ]
 
   #body
