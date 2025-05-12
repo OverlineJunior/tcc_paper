@@ -1,4 +1,4 @@
-#import "../abnt_udc.typ": todo
+#import "../abnt_udc.typ": todo, legenda
 
 = Fundamentação Teórica
 
@@ -86,6 +86,7 @@ fn main() {
     }
 }
 ```
+#legenda("Código", "Implementação simplificada de um padrão ECS incompleto.")
 
 É importante ressaltar que o exemplo acima, por mais que seja funcional e siga o design orientado a dados, ainda é uma simplificação da implementação de um padrão ECS incompleto. Na prática, o armazenamento dos dados é feito através de estruturas de dados mais complexas, que permitem que entidades escolham quais componentes possuem, que sistemas sejam executados automaticamente, além de outras funcionalidades principais do padrão ECS.
 

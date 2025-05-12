@@ -91,6 +91,11 @@
     *#c.supplement #count*#c.separator#c.body
   ]
 
+  #show raw: it => [
+    #set text(font: "Cascadia Mono", ligatures: true)
+    #it
+  ]
+
   #body
 ]
 
@@ -137,4 +142,8 @@
 
 #let todo(texto) = [
   #box(fill: yellow, inset: 0.75em)[#text(fill: white)[*TODO!* #texto]]
+]
+
+#let legenda(tipo, texto) = [
+  #figure([], caption: texto, supplement: tipo, kind: tipo)
 ]
