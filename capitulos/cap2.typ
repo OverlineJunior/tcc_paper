@@ -94,11 +94,15 @@ fn main() {
 
 ==== Extensões do ECS
 
-Adicionalmente, o padrão ECS costuma ser combinado com alguns outros elementos a fim de tornar o desenvolvimento mais prático:
+Adicionalmente, o padrão ECS costuma ser combinado com algumas elementos a fim de tornar o desenvolvimento mais prático, como o agendador e o depurador:
 
-- Estado da Aplicação: estrutura de dados global. A fim de evitar a criação de entidades que atuam como _singletons_, aplicações estruturadas com ECS costumam possuir um estado global para armazenar dados que não se repetem;
-- Agendador: função ou objeto com a finalidade de agendar a ordem e frequência de execução de todos os sistemas, resolvendo dependência entre sistemas e tornando o ciclo de atualização da aplicação mais previsível;
+- Agendador: construto com a finalidade de executar todos os sistemas da aplicação, podendo determinar a ordem e frequência de execução de forma declarativa, resolvendo dependência entre sistemas e tornando o ciclo de atualização da aplicação mais previsível;
+
+#figure(image("../imagens/diagrama_agendador.png", height: 30%), caption: "Agendador executando os sistemas de forma cíclica e sequencial.") <diagrama_agendador>
+
 - Depurador: interface responsável por ajudar o desenvolvedor a encontrar e resolver bugs na aplicação. No contexto de ECS, o depurador pode examinar as entidades e seus respectivos componentes, além de listar os sistemas em execução e permitir o controle sobre eles.
+
+#figure(image("../imagens/flecs_explorer.png", height: 30%), caption: "Flex Explorer, depurador visual para a biblioteca Flecs.") <flecs_explorer>
 
 ===	Interpretador Tree-Walking
 
