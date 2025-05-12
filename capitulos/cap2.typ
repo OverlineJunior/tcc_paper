@@ -33,13 +33,13 @@ O padrão ECS segue o modelo de design orientado a dados, que prioriza a separa�
 
 ==== Os Três Elementos Fundamentais do ECS
 
-O padrão ECS é separado em três elementos fundamentais: entidades, componentes e sistemas. Cada um desses elementos desempenha um papel específico:
+O padrão ECS é separado em três elementos fundamentais: entidades, componentes e sistemas. Cada um desses elementos desempenha um papel específico na aplicação:
 
 - Entidades: identificadores únicos que representam os vários conceitos de uma aplicação. Sozinhas, as entidades não contêm dados nem funcionalidade;
 - Componentes: estruturas de dados que armazenam informações específicas. Uma entidade pode ter múltiplos componentes diferentes, definindo suas características;
 - Sistemas: funções responsáveis por processar sobre entidades com um determinado conjunto de componentes — processo denominado querying.
 
-#figure(image("../imagens/diagrama_ecs.png", height: 35%), caption: "Relação entre entidades, componentes e sistemas no padrão ECS.") <diagrama_ecs>
+#figure(image("../imagens/diagrama_ecs.png", height: 35%), caption: "Relação entre entidades, componentes e sistemas.") <diagrama_ecs>
 
 Como a @diagrama_ecs ilustra, o estado da aplicação é dado por um conjunto de entidades, cada uma com seus respectivos componentes. Os sistemas são responsáveis pela transformação do estado da aplicação, processando as entidades que possuem os componentes necessários para a execução do sistema.
 
