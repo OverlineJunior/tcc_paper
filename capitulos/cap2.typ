@@ -45,6 +45,8 @@ Como a @diagrama_ecs ilustra, o estado da aplicação é dado por um conjunto de
 
 Em termos de código, o padrão ECS pode ser representado sem nenhum construto especializado, mapeando entidades para números únicos, componentes para _structs_ e sistemas para funções:
 
+#pagebreak()
+
 ```rs
 // Componentes podem ser representados através de simples structs.
 struct Position { x: f32, y: f32 }
