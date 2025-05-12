@@ -139,7 +139,8 @@
 ]
 
 #let todo(texto) = [
-  #box(fill: yellow, inset: 0.75em)[#text(fill: white)[*TODO!* #texto]]
+  #set text(weight: "bold", fill: red.darken(25%))
+  TODO! #texto
 ]
 
 #let legenda(tipo, texto) = [
