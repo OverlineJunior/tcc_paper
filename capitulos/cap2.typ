@@ -27,15 +27,69 @@ Dada a descrição das etapas de desenvolvimento, o próximo passo é detalhar o
 
 ===	Entity Component System
 
-Entity Component System (ECS) é um padrão arquitetural que surgiu na área de desenvolvimento de jogos, cuja natureza exige alto desempenho e flexibilidade, qualidades do padrão. Por mais que ECS continue sendo majoritariamente aplicado em jogos, sua utilidade expande para qualquer aplicação que dependa dos mesmos requisitos: alto desempenho e flexibilidade.
+Entity Component System (ECS) é um padrão arquitetural que oferece alta flexibilidade, modularidade e desempenho. Ele surgiu na área de desenvolvimento de jogos, onde a necessidade de otimização e atualizações frequentes no código são comuns, mas sua aplicação pode ser estendida a outras áreas de desenvolvimento de software #todo("Referencia.").
 
-O padrão ECS é composto de três elementos principais @bevy @flecs:
+O padrão ECS segue o modelo de design orientado a dados, que prioriza a separação de dados e lógica, trazendo assim suas vantagens, como o aumento de desempenho e modularidade #todo("Referencia."). Dado isso, o padrão ECS é composto de três elementos principais #todo("Referencia."):
+
+==== Os Três Elementos Fundamentais do ECS
+
+O padrão ECS é separado em três elementos fundamentais: entidades, componentes e sistemas. Cada um desses elementos desempenha um papel específico:
 
 - Entidades: identificadores únicos que representam os vários conceitos de uma aplicação. Sozinhas, as entidades não contêm dados nem funcionalidade;
 - Componentes: estruturas de dados que armazenam informações específicas. Uma entidade pode ter múltiplos componentes diferentes, definindo suas características;
 - Sistemas: funções responsáveis por processar sobre entidades com um determinado conjunto de componentes — processo denominado querying.
 
-#figure(image("../imagens/diagrama_ecs.png", height: 35%), caption: "Relação entre entidades, componentes e sistemas no padrão ECS.")
+#figure(image("../imagens/diagrama_ecs.png", height: 35%), caption: "Relação entre entidades, componentes e sistemas no padrão ECS.") <diagrama_ecs>
+
+Como a @diagrama_ecs ilustra, o estado da aplicação é dado por um conjunto de entidades, cada uma com seus respectivos componentes. Os sistemas são responsáveis pela transformação do estado da aplicação, processando as entidades que possuem os componentes necessários para a execução do sistema.
+
+Em termos de código, o padrão ECS pode ser representado sem nenhum construto especializado, mapeando entidades para números únicos, componentes para _structs_ e sistemas para funções:
+
+```rs
+// Componentes podem ser representados através de simples structs.
+struct Position { x: f32, y: f32 }
+
+struct Velocity { dx: f32, dy: f32 }
+
+// Sistemas podem ser representados como funções que processam todas as
+// entidades e seus respectivos componentes.
+fn apply_velocity(
+    entities: &[usize],
+    positions: &mut [Position],
+    velocities: &[Velocity]
+) {
+    for &entity in entities {
+        positions[entity].x += velocities[entity].dx;
+        positions[entity].y += velocities[entity].dy;
+    }
+}
+
+fn main() {
+    // Entidades podem ser representadas como números únicos.
+    let entities = [0, 1];
+
+    // Cada componente é armazenado em um vetor separado, onde o índice
+    // representa a entidade e o valor representa seu componente.
+    let mut positions = [
+        Position { x: 0.0, y: 0.0 }, // Entidade 0.
+        Position { x: 1.0, y: 1.0 }, // Entidade 1.
+    ];
+
+    let velocities = [
+        Velocity { dx: 1.0, dy: 1.0 }, // Entidade 0.
+        Velocity { dx: 2.0, dy: 2.0 }, // Entidade 1.
+    ];
+
+    // No padrão ECS, é muito comum que os sistemas sejam executados repetidamente.
+    loop {
+        apply_velocity(&entities, &mut positions, &velocities);
+    }
+}
+```
+
+É importante ressaltar que o exemplo acima, por mais que seja funcional e siga o design orientado a dados, ainda é uma simplificação da implementação de um padrão ECS incompleto. Na prática, o armazenamento dos dados é feito através de estruturas de dados mais complexas, que permitem que entidades escolham quais componentes possuem, que sistemas sejam executados automaticamente, além de outras funcionalidades principais do padrão ECS.
+
+==== Extensões do ECS
 
 Adicionalmente, o padrão ECS costuma ser combinado com alguns outros elementos a fim de tornar o desenvolvimento mais prático:
 
