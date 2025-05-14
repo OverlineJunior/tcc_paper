@@ -78,9 +78,24 @@
     #it
   ]
 
-  #set figure(supplement: [Figura])
+  #show figure.caption: it => [
+    #let supplement = if it.supplement == [Figure] {
+      [Figura]
+    } else if it.supplement == [Listing] {
+      [Código]
+      // O query `figure.caption` ocorre para os resultados também, então é
+      // preciso checar se o suplemento não é um deles para gerar o erro.
+    } else if it.supplement != [Figura] and it.supplement != [Código] {
+      panic("Tipo de figura `" + it.supplement + "` não suportado.")
+    }
+    #let count = context it.counter.display(it.numbering)
+    #supplement #count#it.separator#it.body
+  ]
 
   #set figure.caption(position: top, separator: [ — ])
+
+  // Blocos de código podem atravessar páginas.
+  #show figure.where(kind: raw): set block(breakable: true)
 
   #show raw: it => [
     #set text(font: "Cascadia Mono", ligatures: true)
@@ -134,8 +149,4 @@
 #let todo(texto) = [
   #set text(weight: "bold", fill: red.darken(25%))
   TODO! #texto
-]
-
-#let legenda(tipo, texto) = [
-  #figure([], caption: texto, supplement: tipo, kind: tipo)
 ]
