@@ -80,19 +80,7 @@
 
   #set figure(supplement: [Figura])
 
-  #show figure: it => [
-    #set par(leading: 1em, justify: false)
-    #it
-  ]
-
-  #set figure.caption(
-    separator: [. ]
-  )
-
-  #show figure.caption: c => [
-    #let count = context c.counter.display(c.numbering)
-    *#c.supplement #count*#c.separator#c.body
-  ]
+  #set figure.caption(position: top, separator: [ — ])
 
   #show raw: it => [
     #set text(font: "Cascadia Mono", ligatures: true)
