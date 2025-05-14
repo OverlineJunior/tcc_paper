@@ -27,9 +27,11 @@ Dada a descrição das etapas de desenvolvimento, o próximo passo é detalhar o
 
 ===	Entity Component System
 
-Entity Component System (ECS) é um padrão arquitetural que oferece alta flexibilidade, modularidade e desempenho. Ele surgiu na área de desenvolvimento de jogos, onde a necessidade de otimização e atualizações frequentes no código são comuns, mas sua aplicação pode ser estendida a outras áreas de desenvolvimento de software #todo("Referencia.").
+Entity Component System (ECS) é um padrão arquitetural baseado no modelo de design orientado a dados. Ele surgiu na área de desenvolvimento de jogos, onde há uma grande necessidade de otimização e atualizações frequentes no código. Com o passar do tempo, o padrão ECS começou a ser utilizado em outras áreas, como em simulações físicas e computação gráfica #todo("Referencia de acordo com as outras áreas.").
 
-O padrão ECS segue o modelo de design orientado a dados, que prioriza a separação de dados e lógica, trazendo assim suas vantagens, como o aumento de desempenho e modularidade #todo("Referencia."). Dado isso, o padrão ECS é composto de três elementos principais #todo("Referencia."):
+O padrão consiste na separação de dado e lógica de tal forma que as vários entidades da aplicação possam ser compostas de dados reutilizáveis e independentes, com as funções sendo direcionadas aos dados, e não as entidades em si. Devido ao desacoplamento gerado por essa separação, o padrão ECS garante alta flexibilidade e modularidade, além do aumento de desempenho gerado pela melhor distribuição de dados na memória #todo("Referencia.").
+
+Neste projeto, o padrão ECS será um dos principais fundamentos para o design e implementação da linguagem de programação, já que o intuíto dela será abstrair ele.
 
 ==== Os Três Elementos Fundamentais do ECS
 
