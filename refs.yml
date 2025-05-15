@@ -27,6 +27,15 @@ flecs:
     value: https://github.com/SanderMertens/flecs
     date: 2025-02-23
 
+flecsexplorer:
+  type: Repository
+  title: "Flecs Explorer"
+  author: Sander Mertens
+  date: 2021
+  url:
+    value: https://github.com/flecs-hub/explorer
+    date: 2025-05-15
+
 bevy:
   type: Repository
   title: "Bevy: A refreshingly simple data-driven game engine built in Rust"
@@ -46,6 +55,15 @@ thiserror:
   url:
     value: https://github.com/dtolnay/thiserror
     date: 2025-04-30
+
+ecsfaq:
+  type: Repository
+  title: Entity Component System FAQ
+  author: Sander Mertens
+  date: 2019
+  url:
+    value: https://github.com/SanderMertens/ecs-faq
+    date: 2025-05-15
 
 craftinginterpreters:
   type: Book
