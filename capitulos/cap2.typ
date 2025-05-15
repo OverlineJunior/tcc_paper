@@ -99,7 +99,7 @@ Em termos de código, o padrão ECS pode ser representado sem nenhum construto e
 
 Adicionalmente, o padrão ECS costuma ser combinado com algumas elementos a fim de tornar o desenvolvimento mais prático, como o agendador e o depurador:
 
-- Agendador: construto com a finalidade de executar todos os sistemas da aplicação, podendo determinar a ordem e frequência de execução de forma declarativa, resolvendo dependência entre sistemas e tornando o ciclo de atualização da aplicação mais previsível;
+- Agendador: construto com a finalidade de executar todos os sistemas da aplicação, podendo determinar a ordem e frequência de execução de forma declarativa, resolvendo dependência entre sistemas e tornando o ciclo de atualização da aplicação mais previsível @bevy;
 
 #figure(image("../imagens/diagrama_agendador.png", height: 30%), caption: "Agendador executando os sistemas de forma cíclica e sequencial.") <diagrama_agendador>
 
