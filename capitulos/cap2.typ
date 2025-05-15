@@ -104,6 +104,7 @@ Adicionalmente, o padrão ECS costuma ser combinado com algumas elementos a fim 
 - Depurador: interface responsável por ajudar o desenvolvedor a encontrar e resolver bugs na aplicação. No contexto de ECS, o depurador pode examinar as entidades e seus respectivos componentes, além de listar os sistemas em execução e permitir o controle sobre eles.
 
 #figure(image("../imagens/flecs_explorer.png", height: 30%), caption: "Flex Explorer, depurador visual para a biblioteca Flecs.") <flecs_explorer> @flecsexplorer
+#todo("Temporário. Não é assim que se estiliza citações de figuras. Ver https://discord.com/channels/776528333503856710/776528335256682529/1372053000926920735.")
 
 ===	Interpretador Tree-Walking
 
