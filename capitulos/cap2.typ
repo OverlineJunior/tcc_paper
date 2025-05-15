@@ -13,9 +13,9 @@ Dada a descrição das etapas de desenvolvimento, o próximo passo é detalhar o
 
 == Fundamentos
 
-=== Padrão de Projeto de Software
+=== Padrão de Design de Software
 
-Um padrão de projeto de software (do inglês, _design pattern_) é uma solução reutilizável para um problema recorrente em um determinado contexto. Esses padrões são descrições gerais de como resolver problemas comuns de design de software, e não implementações específicas.
+Um padrão de design de software (do inglês, _software design pattern_) é uma solução reutilizável para um determinado problema recorrente no design de software. Esses padrões são descrições gerais de como resolver tais problemas, e não implementações específicas.
 
 De acordo com o site didático Refactoring Guru de #cite(<refactoringguru>, form: "author"), os padrões podem ser classificados em três categorias:
 
@@ -25,7 +25,7 @@ De acordo com o site didático Refactoring Guru de #cite(<refactoringguru>, form
 
 - Padrões Comportamentais: tratam de algoritmos e a atribuição de responsabilidades entre objetos. Abrange padrões como _Observer_, _Strategy_ e _Visitor_.
 
-É importante notar como o autor explica os vários padrões usando o paradigma de programação orientado a objetos — por mais que esse seja o caso, nem todos os padrões de projeto de software são exclusivos a esse paradigma. Um exemplo é o padrão _Observer_, cujo conceito é de grande importância para o paradigma de programação reativa functional (do inglês, _functional reactive programming_) #todo("Adicionar referencia. Dica: https://en.wikipedia.org/wiki/Functional_reactive_programming").
+É importante notar como o autor explica os vários padrões usando o paradigma de programação orientado a objetos — por mais que esse seja o caso, nem todos os padrões de design são exclusivos a esse paradigma. Um exemplo é o padrão _Observer_, cujo conceito é de grande importância para o paradigma de programação reativa functional (do inglês, _functional reactive programming_) #todo("Adicionar referencia. Dica: https://en.wikipedia.org/wiki/Functional_reactive_programming").
 
 === Paradigma de Programação
 
