@@ -15,15 +15,13 @@ Dada a descrição das etapas de desenvolvimento, o próximo passo é detalhar o
 
 === Padrão de Projeto de Software
 
-#todo("Explicar Singleton.")
-
 === Paradigma de Programação
-
-#todo("Explicar POO e funcional.")
 
 === Design Orientado a Dados
 
 #todo("Explicar structure of arrays and array of structures.")
+
+=== Inversão de Controle
 
 ===	Entity Component System
 
@@ -136,5 +134,9 @@ A linguagem de programação utilizada para o desenvolvimento do interpretador s
 O uso de bibliotecas que ajudam no desenvolvimento de interpretadores será proibido, assim cada processo de desenvolvimento do interpretador é estudado a fundo. Porém, algumas bibliotecas de uso geral serão utilizadas:
 
 - thiserror: reduz o boilerplate na definição de erros gerados pelo interpretador com o uso de macros @thiserror.
+
+=== Flecs
+
+=== Bevy
 
 #pagebreak()
