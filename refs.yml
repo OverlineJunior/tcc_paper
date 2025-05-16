@@ -92,6 +92,16 @@ pragmaticprogrammer:
     name: Addison-Wesley
     location: Boston, Massachusetts
 
+fundsoftwarearchitecture:
+  type: Book
+  title: "Fundamentals of Software Architecture: An Engineering Approach"
+  author: [Mark Richards, Neal Ford]
+  date: 2020
+  edition: 1st
+  publisher:
+    name: O'Reilly Media
+    location: Sebastopol, California
+
 ecsstorageinpics:
   type: Blog
   title: ECS Storage in Pictures
