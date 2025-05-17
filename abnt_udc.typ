@@ -58,12 +58,12 @@
     set text(weight: "bold") if it.level <= 2
 
     if it.level == 1 {
-      v(par.spacing, weak: true)
+      v(par.spacing, weak: false)
     }
 
     link(
       it.element.location(),
-      it.indented(box(width: 2.5em, it.prefix()), it.inner()),
+      it.indented(box(width: 3.5em, it.prefix()), it.inner()),
     )
   }
 
