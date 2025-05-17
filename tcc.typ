@@ -16,8 +16,9 @@
 
 #outline(title: "Sumário")
 
-#include "capitulos/cap1.typ"
-#include "capitulos/cap2.typ"
+#include "capitulos/introducao.typ"
+
+#include "capitulos/fundamentacao.typ"
 
 #bibliography(
 	"refs.yml",
