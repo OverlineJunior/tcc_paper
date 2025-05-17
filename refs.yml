@@ -54,6 +54,17 @@ logos:
     value: https://github.com/maciejhirsz/logos
     date: 2025-05-17
 
+chumsky:
+  type: Repository
+  title: Chumsky
+  author:
+    name: Joshua Barretto
+    alias: zesterer
+  date: 2021
+  url:
+    value: https://github.com/zesterer/chumsky
+    date: 2025-05-17
+
 thiserror:
   type: Repository
   title: "thiserror"
