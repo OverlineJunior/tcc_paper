@@ -218,6 +218,7 @@ Além da simplicidade na definição dos _tokens_, o analisador léxico gerado �
     ),
     caption: [_Benchmark_ da biblioteca Logos.],
 )
+@logos
 
 No projeto, ela será utilizada na implementação de toda a análise léxica, evitando que tempo seja gasto na análise manual de cada _token_ e assim permitindo um foco maior no design da linguagem.
 
