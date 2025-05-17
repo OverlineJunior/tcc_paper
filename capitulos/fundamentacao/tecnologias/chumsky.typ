@@ -28,3 +28,4 @@ De acordo com a classificação do _benchmark_ da biblioteca e seus competidores
     ),
     caption: [Classificação do _benchmark_ da biblioteca Chumsky e competidores.]
 )
+@chumsky
