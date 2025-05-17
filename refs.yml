@@ -45,6 +45,15 @@ bevy:
     value: https://github.com/bevyengine/bevy
     date: 2025-04-14
 
+logos:
+  type: Repository
+  title: Logos
+  author: Maciej Hirsz
+  date: 2018
+  url:
+    value: https://github.com/maciejhirsz/logos
+    date: 2025-05-17
+
 thiserror:
   type: Repository
   title: "thiserror"
