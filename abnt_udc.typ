@@ -85,7 +85,13 @@
       [Código]
       // O query `figure.caption` ocorre para os resultados também, então é
       // preciso checar se o suplemento não é um deles para gerar o erro.
-    } else if it.supplement != [Figura] and it.supplement != [Código] {
+    } else if it.supplement == [Table] {
+      [Tabela]
+    } else if (
+      it.supplement != [Figura]
+      and it.supplement != [Código]
+      and it.supplement != [Tabela]
+    ) {
       panic("Tipo de figura `" + it.supplement + "` não suportado.")
     }
     #let count = context it.counter.display(it.numbering)
