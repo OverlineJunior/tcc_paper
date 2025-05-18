@@ -62,4 +62,5 @@ Além da simplicidade na definição dos _tokens_, o analisador léxico gerado �
 )
 @logos
 
-No projeto, ela será utilizada na implementação de toda a análise léxica, evitando que tempo seja gasto na análise manual de cada _token_ e assim permitindo um foco maior no design da linguagem.
+Por fim, o uso da biblioteca Logos estará na implementação de toda a análise léxica, evitando que tempo seja gasto na análise manual de cada _token_. A motivação para a escolha da biblioteca se deve à sua simplicidade e maturidade, assim minimizando o tempo de desenvolvimento e garantindo maior estabilidade.
+

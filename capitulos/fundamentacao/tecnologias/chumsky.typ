@@ -104,3 +104,5 @@ De acordo com a classificação do _benchmark_ da biblioteca e seus competidores
     caption: [Classificação do _benchmark_ da biblioteca Chumsky e competidores.]
 )
 @chumsky
+
+Por fim, o uso da biblioteca Chumsky estará na implementação da análise sintática, e será utilizada em conjunto com a biblioteca Logos na implementação do interpretador como um todo. Assim como foi o caso com Logos, a escolha de Chumsky se deve à sua maturidade.
