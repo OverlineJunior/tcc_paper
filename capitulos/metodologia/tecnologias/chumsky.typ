@@ -7,7 +7,7 @@ Chumsky é uma biblioteca de análise sintática para Rust. Ela é baseada no co
 Ao usar a biblioteca para construir um _parser_, nota-se a influência do paradigma funcional. Por mais que seja um paradigma mais incomum, seu uso na biblioteca torna o processo de construção do _parser_ muito parecido com a construção de uma gramática formal:
 
 #figura_legendada(
-    [_Parser_ para uma gramática de expressões aritméticas simples com Chumsky.],
+    [_Parser_ para uma gramática de expressões aritméticas simples usando a biblioteca Chumsky.],
     [Fonte: Adaptado de #cite(<chumsky>, form: "prose").],
     ```rust
     use chumsky::prelude::*;
