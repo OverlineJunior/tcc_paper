@@ -1,6 +1,6 @@
 #import "../abnt_udc.typ": todo
 
-= Fundamentação Teórica
+= Metodologia
 
 O desenvolvimento deste trabalho será feito em quatro etapas cronológicas a fim de isolar os requisitos de cada uma. As etapas são descritas a seguir:
 
@@ -13,34 +13,34 @@ Dada a descrição das etapas de desenvolvimento, o próximo passo é detalhar o
 
 == Fundamentos
 
-#include "fundamentacao/fundamentos/padrao_design.typ"
+#include "metodologia/fundamentos/padrao_design.typ"
 
-#include "fundamentacao/fundamentos/padrao_arquitetura.typ"
+#include "metodologia/fundamentos/padrao_arquitetura.typ"
 
-#include "fundamentacao/fundamentos/paradigma.typ"
+#include "metodologia/fundamentos/paradigma.typ"
 
-#include "fundamentacao/fundamentos/design_dados.typ"
+#include "metodologia/fundamentos/design_dados.typ"
 
-#include "fundamentacao/fundamentos/inversao_controle.typ"
+#include "metodologia/fundamentos/inversao_controle.typ"
 
-#include "fundamentacao/fundamentos/ecs.typ"
+#include "metodologia/fundamentos/ecs.typ"
 
-#include "fundamentacao/fundamentos/interpretador.typ"
+#include "metodologia/fundamentos/interpretador.typ"
 
-#include "fundamentacao/fundamentos/tracer_bullet.typ"
+#include "metodologia/fundamentos/tracer_bullet.typ"
 
 ==	Tecnologias
 
-#include "fundamentacao/tecnologias/rust.typ"
+#include "metodologia/tecnologias/rust.typ"
 
-#include "fundamentacao/tecnologias/cargo.typ"
+#include "metodologia/tecnologias/cargo.typ"
 
-#include "fundamentacao/tecnologias/logos.typ"
+#include "metodologia/tecnologias/logos.typ"
 
-#include "fundamentacao/tecnologias/chumsky.typ"
+#include "metodologia/tecnologias/chumsky.typ"
 
-#include "fundamentacao/tecnologias/flecs.typ"
+#include "metodologia/tecnologias/flecs.typ"
 
-#include "fundamentacao/tecnologias/bevy.typ"
+#include "metodologia/tecnologias/bevy.typ"
 
 #pagebreak()
