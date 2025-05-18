@@ -39,8 +39,8 @@
     leading: 1.5em,
   )
 
+  // Título de outline.
   #show outline: it => [
-    #set outline(indent: 0pt)
     #show heading: set heading(outlined: false)
     #show heading: set align(center)
 
@@ -54,17 +54,38 @@
     #pagebreak()
   ]
 
-  #show outline.entry: it => {
-    set text(weight: "bold") if it.level <= 2
+  // Lista de itens.
+  // Por algum motivo, não consegui fazer um selector só para os vários tipos de figura.
+  #let entry_de_figura(entry) = link(
+    entry.element.location(),
+    entry.indented([*#entry.prefix().*], entry.inner()),
+  )
+  #show outline.where(target: selector(figure.where(kind: image))): it => {
+    show outline.entry: it => entry_de_figura(it)
+    it
+  }
+  #show outline.where(target: selector(figure.where(kind: table))): it => {
+    show outline.entry: it => entry_de_figura(it)
+    it
+  }
+  #show outline.where(target: selector(figure.where(kind: raw))): it => {
+    show outline.entry: it => entry_de_figura(it)
+    it
+  }
 
-    if it.level == 1 {
-      v(par.spacing, weak: false)
+  // Sumário.
+  #show outline.where(target: selector(heading)): it => {
+    show outline.entry.where(level: 1): it => {
+      set block(above: 3em)
+      upper(it)
     }
 
-    link(
-      it.element.location(),
-      it.indented(box(width: 3.5em, it.prefix()), it.inner()),
-    )
+    show outline.entry.where(level: 1).or(outline.entry.where(level: 2)): it => {
+      set text(weight: "bold")
+      it
+    }
+
+    it
   }
 
   #show bibliography: it => [
