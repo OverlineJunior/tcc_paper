@@ -108,6 +108,12 @@
     #it
   ]
 
+  #show table: block.with(stroke: (top: 1pt, bottom: 1pt))
+
+  #set table(stroke: (_, y) => if y == 0 { (bottom: 0.5pt) })
+
+  #show table.cell.where(y: 0): strong
+
   #body
 ]
 
