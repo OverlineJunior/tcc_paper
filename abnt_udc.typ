@@ -162,3 +162,15 @@
   #set text(weight: "bold", fill: red.darken(25%))
   TODO! #texto
 ]
+
+#let figura_legendada(titulo, legenda, corpo) = [
+  #figure(
+    stack(
+      dir: ttb,
+      spacing: 1em,
+      corpo,
+      align(start)[#legenda]
+    ),
+    caption: titulo,
+  )
+]
