@@ -18,7 +18,6 @@ Com base na explicação de #cite(<ecsfaq>, form: "prose"), pode-se dizer que o 
 
 #figure(image("../../../imagens/diagrama_ecs.png", height: 35%), caption: "Relação entre entidades, componentes e sistemas.") <diagrama_ecs>
 
-#todo("Citação de figura não está gerando o suplemento correto. Provavelmente se deve ao fato de que `#set figure(supplement: ___)` não está sendo usado mais.")
 Como a @diagrama_ecs ilustra, o estado da aplicação é dado por um conjunto de entidades, cada uma com seus respectivos componentes. Os sistemas são responsáveis pela transformação do estado da aplicação, processando as entidades que possuem os componentes necessários para a execução do sistema.
 
 Em termos de código, o padrão ECS pode ser representado sem nenhum construto especializado, mapeando entidades para números únicos, componentes para _structs_ e sistemas para funções:
