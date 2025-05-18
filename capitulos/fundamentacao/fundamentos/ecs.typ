@@ -1,4 +1,4 @@
-#import "../../../abnt_udc.typ": todo
+#import "../../../abnt_udc.typ": todo, figura_legendada
 
 ===	Entity Component System
 
@@ -76,9 +76,12 @@ Adicionalmente, o padrão ECS costuma ser combinado com algumas elementos a fim 
 
 - Agendador: construto com a finalidade de executar todos os sistemas da aplicação, podendo determinar a ordem e frequência de execução de forma declarativa, resolvendo dependência entre sistemas e tornando o ciclo de atualização da aplicação mais previsível @bevy;
 
-#figure(image("../../../imagens/diagrama_agendador.png", height: 30%), caption: "Agendador executando os sistemas de forma cíclica e sequencial.") <diagrama_agendador>
+#figure(image("../../../imagens/diagrama_agendador.png", height: 30%), caption: "Agendador executando os sistemas de forma cíclica e sequencial.")
 
 - Depurador: interface responsável por ajudar o desenvolvedor a encontrar e resolver bugs na aplicação. No contexto de ECS, o depurador pode examinar as entidades e seus respectivos componentes, além de listar os sistemas em execução e permitir o controle sobre eles.
 
-#figure(image("../../../imagens/flecs_explorer.png", height: 30%), caption: "Flex Explorer, depurador visual para a biblioteca Flecs.") <flecs_explorer> @flecsexplorer
-#todo("Temporário. Não é assim que se estiliza citações de figuras. Ver https://discord.com/channels/776528333503856710/776528335256682529/1372053000926920735.")
+#figura_legendada(
+    [Flex Explorer, depurador visual para a biblioteca Flecs.],
+    [Fonte: #cite(<flecsexplorer>, form: "prose").],
+    image("../../../imagens/flecs_explorer.png", height: 30%),
+)

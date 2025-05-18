@@ -1,8 +1,12 @@
+#import "../../../abnt_udc.typ": figura_legendada
+
 === Logos
 
 Logos é uma biblioteca de análise léxica para Rust. Ela consiste na definição de _tokens_ através de _macros_ e expressões regulares, tornando o código extremamente conciso.
 
-#figure(
+#figura_legendada(
+    [Análise léxica para uma calculadora usando a biblioteca Logos.],
+    [Fonte: Adaptado de #cite(<logos>, form: "prose").],
     ```rust
     use logos::Logos;
 
@@ -39,13 +43,13 @@ Logos é uma biblioteca de análise léxica para Rust. Ela consiste na definiç�
         }
     }
     ```,
-    caption: [Análise léxica para uma calculadora usando a biblioteca Logos.]
 )
-@agile
 
 Além da simplicidade na definição dos _tokens_, o analisador léxico gerado é extremamente rápido, como mostra o _benchmark_ no repositório oficial da biblioteca:
 
-#figure(
+#figura_legendada(
+    [_Benchmark_ da biblioteca Logos.],
+    [Fonte: #cite(<logos>, form: "prose").],
     table(
         columns: (auto, auto),
         inset: 10pt,
@@ -58,9 +62,7 @@ Além da simplicidade na definição dos _tokens_, o analisador léxico gerado �
         [Strings],
         [553 ns/iter (+/- 34) = 1575 MB/s]
     ),
-    caption: [_Benchmark_ da biblioteca Logos.],
 )
-@logos
 
 Por fim, o uso da biblioteca Logos estará na implementação de toda a análise léxica, evitando que tempo seja gasto na análise manual de cada _token_. A motivação para a escolha da biblioteca se deve à sua simplicidade e maturidade, assim minimizando o tempo de desenvolvimento e garantindo maior estabilidade.
 

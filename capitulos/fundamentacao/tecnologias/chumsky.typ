@@ -1,10 +1,14 @@
+#import "../../../abnt_udc.typ": figura_legendada
+
 === Chumsky
 
 Chumsky é uma biblioteca de análise sintática para Rust. Ela é baseada no conceito de _parser combinators_ #footnote[Um _parser combinator_ consiste na combinação de parsers mais simples para criar parsers mais complexos, assim como é de costume compor uma função maior de funções menores.], e permite que a definição de _parsers_ seja feita de forma declarativa. Seu escopo abrange tanto gramáticas livres de contexto quanto gramáticas sensíveis ao contexto.
 
 Ao usar a biblioteca para construir um _parser_, nota-se a influência do paradigma funcional. Por mais que seja um paradigma mais incomum, seu uso na biblioteca torna o processo de construção do _parser_ muito parecido com a construção de uma gramática formal:
 
-#figure(
+#figura_legendada(
+    [_Parser_ para uma gramática de expressões aritméticas simples com Chumsky.],
+    [Fonte: Adaptado de #cite(<chumsky>, form: "prose").],
     ```rust
     use chumsky::prelude::*;
 
@@ -65,12 +69,13 @@ Ao usar a biblioteca para construir um _parser_, nota-se a influência do paradi
         parser().parse("-2 * 3 + 5");
     }
     ```,
-    caption: [_Parser_ para uma gramática de expressões aritméticas simples com Chumsky.]
 )
 
 De acordo com a classificação do _benchmark_ da biblioteca e seus competidores, localizada no repositório oficial, Chusmky tem a capacidade de ser a biblioteca de análise sintática mais rápida para Rust:
 
-#figure(
+#figura_legendada(
+    [Classificação do _benchmark_ da biblioteca Chumsky e competidores.],
+    [Fonte: #cite(<chumsky>, form: "prose").],
     table(
         columns: 3,
         inset: 10pt,
@@ -101,8 +106,6 @@ De acordo com a classificação do _benchmark_ da biblioteca e seus competidores
         [pom],
         [13.730 ms],
     ),
-    caption: [Classificação do _benchmark_ da biblioteca Chumsky e competidores.]
 )
-@chumsky
 
 Por fim, o uso da biblioteca Chumsky estará na implementação da análise sintática, e será utilizada em conjunto com a biblioteca Logos na implementação do interpretador como um todo. Assim como foi o caso com Logos, a escolha de Chumsky se deve à sua maturidade.
