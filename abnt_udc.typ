@@ -169,7 +169,7 @@
       dir: ttb,
       spacing: 1em,
       corpo,
-      align(start)[#legenda]
+      align(start)[#text(size: 10pt)[#legenda]]
     ),
     caption: titulo,
   )
