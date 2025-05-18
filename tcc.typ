@@ -14,6 +14,12 @@
 
 #folha_de_rosto(autor, titulo, orientador, local, data)
 
+#outline(title: "Lista de Figuras", target: figure.where(kind: image))
+
+#outline(title: "Lista de Tabelas e Quadros", target: figure.where(kind: table))
+
+#outline(title: "Lista de Códigos", target: figure.where(kind: raw))
+
 #outline(title: "Sumário")
 
 #include "capitulos/introducao.typ"
