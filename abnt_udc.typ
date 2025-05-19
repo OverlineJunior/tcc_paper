@@ -119,6 +119,22 @@
 
   #show table.cell.where(y: 0): strong
 
+  #set quote(block: true)
+
+  #show quote.where(block: true): it => {
+    set text(size: 10pt)
+    set par(leading: 1em)
+    set block(above: 3em, below: 3em)
+    set rect(width: 100%, stroke: none)
+
+    grid(
+      columns: (4cm, 1fr),
+      rows: 1,
+      rect[],
+      rect[#it],
+    )
+  }
+
   #body
 ]
 
