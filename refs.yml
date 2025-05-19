@@ -131,6 +131,15 @@ ecsstorageinpics:
     value: https://ajmmertens.medium.com/building-an-ecs-storage-in-pictures-642b8bfd6e04
     date: 2025-02-22
 
+ecsparadigm:
+  type: Blog
+  title: "ECS: From Tool to Paradigm"
+  author: Sander Mertens
+  date: 2021
+  url:
+    value: https://ajmmertens.medium.com/ecs-from-tool-to-paradigm-350587cdf216
+    date: 2025-05-18
+
 whatsprogrammingparadigm:
   type: Blog
   title: What is a Programming Paradigm?
