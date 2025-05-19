@@ -8,8 +8,8 @@ Os paradigmas são organizados em categorias, podendo ser vistos como uma hierar
 
 #figura_legendada(
 	[Paradigmas de programação organizados hierarquicamente.],
-	[Fonte: Adaptado de #cite(<whatsprogrammingparadigm>, form: "prose").],
 	image("../../../imagens/hierarquia_paradigmas.png", height: 35%),
+	[Fonte: Adaptado de #cite(<whatsprogrammingparadigm>, form: "prose").],
 )
 
 Com base na figura, observa-se a relevância dos paradigmas imperativo e declarativo, já que todos os outros paradigmas derivam, em maior ou menor grau, de um desses dois. Por mais que paradigmas mais específicos possam tomar rumos inesperados, eles ainda terão algum grau de herança dos paradigmas imperativo ou declarativo.
