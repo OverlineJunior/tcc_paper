@@ -87,7 +87,7 @@ Relacionamento de entidades (do inglês, _entity relationship_) é um conceito q
     [Entidade com um componente de posição.],
     image("../../../imagens/entidade_posicao.png", height: 6%),
     [```ts Entidade.set<Posição>({0, 0});```],
-    [Fonte: #cite(<flecs>, form: "prose").],
+    [Fonte: #cite(<entityrelationships>, form: "prose").],
 )
 
 Do mesmo jeito que se adiciona um único componente a uma entidade, como mostra a figura acima, pode-se criar um relacionamento entre duas entidades adicionando uma tupla componente-entidade, onde o componente dita o tipo de relação:
@@ -96,7 +96,7 @@ Do mesmo jeito que se adiciona um único componente a uma entidade, como mostra 
     [Representação do relacionamento entre o Sol, a Terra e a Lua.],
     image("../../../imagens/relacionamento_entidades.png", height: 13%),
     [```cs Terra.add(FilhoDe, Sol); Lua.add(FilhoDe, Terra);```],
-    [Fonte: Adaptado de #cite(<flecs>, form: "prose").],
+    [Fonte: Adaptado de #cite(<entityrelationships>, form: "prose").],
 )
 
 ==== Depurador de ECS
