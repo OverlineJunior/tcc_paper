@@ -1,9 +1,33 @@
+#import "../../../abnt_udc.typ": figura_legendada
+
 ===	Interpretador Tree-Walking
 
-Interpretador tree-walking é um tipo de interpretador que pula algumas etapas finais a fim de manter a simplicidade. Por isso, ele será ideal para a implementação do protótipo do projeto.
-De forma mais detalhada, tal interpretador costuma iniciar a execução da aplicação logo após a geração da árvore sintática abstrata (AST), pulando a geração de código intermediário e otimizações relacionadas. A simplicidade que este tipo de interpretador traz também vem com a desvantagem de ter um menor desempenho, porém, isso se mostra irrelevante para a implementação do protótipo deste projeto.
-A seguir estão as principais etapas que um interpretador tree-walking costuma implementar a fim de executar o código de uma aplicação:
+Um interpretador é um programa que executa diretamente o código fonte de uma linguagem de programação, linha por linha. No caso deste projeto, será utilizada uma variante chamada de interpretador _tree-walking_, que pula algumas das etapas finais, resultando em maior simplicidade com menor desempenho @craftinginterpreters, o que combina com a proposta de implementação de um protótipo.
 
-+ Análise Léxica: transforma o código fonte em uma lista de tokens, que são estruturas de dados com a finalidade de armazenar informações sobre cada palavra da gramática da linguagem;
-+ Análise Sintática: transforma a lista de tokens gerada pela análise léxica em uma árvore sintática abstrata (AST), que é uma árvore ordenada com a finalidade de representar a hierarquia estrutural do código de acordo com as regras gramaticais da linguagem;
-+ Interpretação: percorre a AST gerada pela análise sintática, reduzindo expressões, atualizando o estado do programa e executando funções. Um interpretador mais completo adiaria esta etapa, antes fazendo a análise semântica, geração de código intermediário, entre outras etapas @craftinginterpreters.
+Um interpretador _tree-walking_ é dividido em três fases principais: análise léxica, análise sintática e interpretação. As etapas puladas são a de análise semântica#footnote([Por mais que a análise semântica tenha sua própria fase pulada, ela ainda é parcialmente implementada de forma implícita nas fases de análise sintática e interpretação @craftinginterpreters.]) e a de geração de representação intermediária, como mostra a figura a seguir:
+
+#figura_legendada(
+	[Mapa do território de um interpretador.],
+	image("../../../imagens/mapa_interpretador.png", height: 35%),
+	[Fonte: #cite(<craftinginterpreters>, form: "prose").],
+)
+
+Abaixo estão as definições de cada uma das três principais fases do interpretador _tree-walking_:
+
+1. Análise léxica: primeira fase do processo de interpretação, onde as palavras do código fonte são transformadas em tokens, estruturas de dados que armazenam informações sobre cada palavra da gramática da linguagem @craftinginterpreters;
+
+#figure(
+	image("../../../imagens/analise_lexica.png", height: 25%),
+)
+
+2. Análise sintática: segunda fase do processo de interpretação, onde os tokens gerados na fase anterior são organizados em uma árvore sintática abstrata (do inglês, _abstract syntax tree_ — AST), que representa a hierarquia estrutural do código de acordo com as regras gramaticais da linguagem @craftinginterpreters;
+
+#figure(
+	image("../../../imagens/analise_sintatica.png", height: 33%),
+)
+
+3. Interpretação: última fase do processo de interpretação, onde a AST gerada na fase de análise sintática é percorrida e executada. Durante essa fase, o interpretador avalia expressões, atualiza o estado do programa e executa funções @craftinginterpreters.
+
+#figure(
+	image("../../../imagens/interpretacao.png", height: 28%),
+)
