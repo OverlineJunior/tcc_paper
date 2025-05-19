@@ -140,6 +140,15 @@ ecsparadigm:
     value: https://ajmmertens.medium.com/ecs-from-tool-to-paradigm-350587cdf216
     date: 2025-05-18
 
+entityrelationships:
+  type: Blog
+  title: Building Games in ECS with Entity Relationships
+  author: Sander Mertens
+  date: 2022
+  url:
+    value: https://ajmmertens.medium.com/building-games-in-ecs-with-entity-relationships-657275ba2c6c
+    date: 2025-05-19
+
 whatsprogrammingparadigm:
   type: Blog
   title: What is a Programming Paradigm?
