@@ -166,3 +166,11 @@ refactoringguru:
   url:
     value: https://refactoring.guru/design-patterns
     date: 2025-04-30
+
+merriamwebster:
+  type: Reference
+  title: Merriam-Webster
+  author: Merriam-Webster, Inc.
+  url:
+    value: https://www.merriam-webster.com/
+    date: 2025-05-18
