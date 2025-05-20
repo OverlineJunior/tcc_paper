@@ -16,13 +16,18 @@ Com base na explicação de #cite(<ecsfaq>, form: "prose"), pode-se dizer que o 
 - Componentes: estruturas de dados que armazenam informações específicas. Uma entidade pode ter múltiplos componentes diferentes, definindo suas características;
 - Sistemas: funções responsáveis por processar sobre entidades com um determinado conjunto de componentes — processo denominado querying.
 
-#figure(image("../../../imagens/diagrama_ecs.png", height: 35%), caption: "Relação entre entidades, componentes e sistemas.") <diagrama_ecs>
+#figura_legendada(
+    [Relação entre entidades, componentes e sistemas.],
+    image("../../../imagens/diagrama_ecs.png", height: 35%),
+    [Fonte: Adaptado de #todo[Achar a figura parecida e referenciar].],
+)
 
-Como a @diagrama_ecs ilustra, o estado da aplicação é dado por um conjunto de entidades, cada uma com seus respectivos componentes. Os sistemas são responsáveis pela transformação do estado da aplicação, processando as entidades que possuem os componentes necessários para a execução do sistema.
+Como a figura acima ilustra, o estado da aplicação é dado por um conjunto de entidades, cada uma com seus respectivos componentes. Os sistemas são responsáveis pela transformação do estado da aplicação, processando as entidades que possuem os componentes necessários para a execução do sistema.
 
 Em termos de código, o padrão ECS pode ser representado sem nenhum construto especializado, mapeando entidades para números únicos, componentes para _structs_ e sistemas para funções:
 
-#figure(
+#figura_legendada(
+    [Implementação simplificada de um padrão ECS incompleto.],
     ```rs
     // Componentes podem ser representados através de simples structs.
     struct Position { x: f32, y: f32 }
@@ -64,10 +69,10 @@ Em termos de código, o padrão ECS pode ser representado sem nenhum construto e
         }
     }
     ```,
-    caption: "Implementação simplificada de um padrão ECS incompleto."
-) <codigo_ecs_simplificado>
+    [Fonte: Elaboração própria.],
+)
 
-É importante ressaltar que o @codigo_ecs_simplificado, por mais que seja funcional e siga o design orientado a dados, ainda é uma simplificação da implementação de um padrão ECS incompleto. Na prática, o armazenamento dos dados é feito através de estruturas de dados mais complexas @ecsstorageinpics, que permitem que entidades escolham quais componentes possuem, que sistemas sejam executados automaticamente, além de outras funcionalidades principais do padrão ECS.
+É importante ressaltar que o código acima, por mais que seja funcional e siga o design orientado a dados, ainda é uma simplificação da implementação de um padrão ECS incompleto. Na prática, o armazenamento dos dados é feito através de estruturas de dados mais complexas @ecsstorageinpics, que permitem que entidades escolham quais componentes possuem, que sistemas sejam executados automaticamente, além de outras funcionalidades principais do padrão ECS.
 
 Fora a definição de ECS e seus três elementos fundamentais, o padrão ainda peca pela falta de formalização — quais são as práticas recomendadas ao usar ECS? Como os sistemas são executados? E se apenas entidades, componentes e sistemas não forem suficientes para resolver meu problema? Essas perguntas não possuem respostas definitivas, porém, diferentes autores e implementações abordam o padrão do seu jeito. A seguir, são apresentados alguns conceitos herdados de tais autores e implementações.
 
@@ -75,7 +80,11 @@ Fora a definição de ECS e seus três elementos fundamentais, o padrão ainda p
 
 O agendador é um construto com a finalidade de executar todos os sistemas da aplicação, podendo determinar a ordem e frequência de execução de forma declarativa, resolvendo dependência entre sistemas e tornando o ciclo de atualização da aplicação mais previsível @bevy. Pode-se dizer que, dentre os conceitos mais experimentais, o agendador é o mais próximo de uma formalização.
 
-#figure(image("../../../imagens/diagrama_agendador.png", height: 30%), caption: "Agendador executando os sistemas de forma cíclica e sequencial.")
+#figura_legendada(
+    [Agendador executando os sistemas de forma cíclica e sequencial.],
+    image("../../../imagens/diagrama_agendador.png", height: 30%),
+    [Fonte: Elaboração própria.],
+)
 
 ==== Relacionamento de Entidades
 
