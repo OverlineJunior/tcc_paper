@@ -26,6 +26,8 @@
 
 #include "capitulos/fundamentacao.typ"
 
+#include "capitulos/metodologia.typ"
+
 #bibliography(
 	"refs.yml",
 	title: "Referências",
