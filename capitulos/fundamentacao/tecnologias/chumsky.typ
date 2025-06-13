@@ -1,6 +1,6 @@
 #import "../../../abnt_udc.typ": figura_legendada
 
-=== Chumsky
+=== Biblioteca Chumsky
 
 Chumsky é uma biblioteca de análise sintática para Rust. Ela é baseada no conceito de _parser combinators_ #footnote[Um _parser combinator_ consiste na combinação de parsers mais simples para criar parsers mais complexos, assim como é de costume compor uma função maior de funções menores.], e permite que a definição de _parsers_ seja feita de forma declarativa. Seu escopo abrange tanto gramáticas livres de contexto quanto gramáticas sensíveis ao contexto.
 
@@ -68,7 +68,7 @@ Ao usar a biblioteca para construir um _parser_, nota-se a influência do paradi
         parser().parse("-2 * 3 + 5");
     }
     ```,
-    [Fonte: Adaptado de #cite(<chumsky>, form: "prose").],
+    [Fonte: adaptado de #cite(<chumsky>, form: "prose").],
 )
 
 De acordo com a classificação do _benchmark_ da biblioteca e seus competidores, localizada no repositório oficial, Chusmky tem a capacidade de ser a biblioteca de análise sintática mais rápida para Rust:

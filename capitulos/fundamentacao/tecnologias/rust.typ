@@ -1,4 +1,4 @@
-===	Rust
+===	Linguagem de Programação Rust
 
 A linguagem de programação utilizada para o desenvolvimento do interpretador será Rust. A motivação por trás da escolha se dá pelos seguintes fatos:
 

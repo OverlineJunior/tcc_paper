@@ -180,8 +180,9 @@
 ]
 
 #let todo(texto) = [
-  #set text(weight: "bold", fill: red.darken(25%))
-  TODO! #texto
+  // Removido para entrega.
+  // #set text(weight: "bold", fill: red.darken(25%))
+  // TODO! #texto
 ]
 
 #let figura_legendada(titulo, corpo, ..legendas) = {

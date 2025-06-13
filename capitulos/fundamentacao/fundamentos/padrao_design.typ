@@ -12,4 +12,4 @@ De acordo com o site didático Refactoring Guru de #cite(<refactoringguru>, form
 
 - Padrões Comportamentais: tratam de algoritmos e a atribuição de responsabilidades entre objetos. Abrange padrões como _Observer_, _Strategy_ e _Visitor_.
 
-É importante notar como o autor explica os vários padrões usando o paradigma de programação orientado a objetos — por mais que esse seja o caso, nem todos os padrões de design são exclusivos a esse paradigma. Um exemplo é o padrão _Observer_, cujo conceito é de grande importância para o paradigma de programação reativa functional (do inglês, _functional reactive programming_) #todo("Adicionar referencia. Dica: https://en.wikipedia.org/wiki/Functional_reactive_programming").
+É importante notar como o autor explica os vários padrões usando o paradigma de programação orientado a objetos — por mais que esse seja o caso, nem todos os padrões de design são exclusivos a esse paradigma. Um exemplo é o padrão _Observer_, cujo conceito é de grande importância para o paradigma de programação reativa (do inglês, _reactive programming_) @reactivex.

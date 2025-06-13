@@ -4,7 +4,7 @@
 
 Entity Component System (ECS) é um padrão arquitetural baseado no design orientado a dados. Ele surgiu na área de desenvolvimento de jogos, onde há uma grande necessidade de otimização e atualizações frequentes no código. Com o passar do tempo, o padrão ECS começou a ser utilizado em outras áreas, como em simulações físicas @flightdynamics.
 
-O padrão consiste na separação de dado e lógica de tal forma que as vários entidades da aplicação possam ser compostas de dados reutilizáveis e independentes @ecsfaq, com as funções sendo direcionadas aos dados, e não as entidades em si. Devido ao desacoplamento gerado por essa separação, o padrão ECS garante alta flexibilidade e modularidade, além do aumento de desempenho gerado pela melhor distribuição de dados na memória @ecsstorageinpics.
+O padrão consiste na separação de dado e lógica de tal forma que as vários entidades da aplicação possam ser compostas de dados reutilizáveis e independentes @ecsfaq, com as funções sendo direcionadas aos dados, e não às entidades em si. Devido ao desacoplamento gerado por essa separação, o padrão ECS garante alta flexibilidade e modularidade, além do aumento de desempenho gerado pela melhor distribuição de dados na memória @ecsstorageinpics.
 
 Neste projeto, o padrão ECS será um dos principais fundamentos para o design e implementação da linguagem de programação, já que o intuíto dela será abstrair ele.
 
@@ -19,7 +19,7 @@ Com base na explicação de #cite(<ecsfaq>, form: "prose"), pode-se dizer que o 
 #figura_legendada(
     [Relação entre entidades, componentes e sistemas.],
     image("../../../imagens/diagrama_ecs.png", height: 35%),
-    [Fonte: Adaptado de #todo[Achar a figura parecida e referenciar].],
+    [Fonte: elaboração própria.],
 )
 
 Como a figura acima ilustra, o estado da aplicação é dado por um conjunto de entidades, cada uma com seus respectivos componentes. Os sistemas são responsáveis pela transformação do estado da aplicação, processando as entidades que possuem os componentes necessários para a execução do sistema.
@@ -69,7 +69,7 @@ Em termos de código, o padrão ECS pode ser representado sem nenhum construto e
         }
     }
     ```,
-    [Fonte: Elaboração própria.],
+    [Fonte: elaboração própria.],
 )
 
 É importante ressaltar que o código acima, por mais que seja funcional e siga o design orientado a dados, ainda é uma simplificação da implementação de um padrão ECS incompleto. Na prática, o armazenamento dos dados é feito através de estruturas de dados mais complexas @ecsstorageinpics, que permitem que entidades escolham quais componentes possuem, que sistemas sejam executados automaticamente, além de outras funcionalidades principais do padrão ECS.
@@ -83,7 +83,7 @@ O agendador é um construto com a finalidade de executar todos os sistemas da ap
 #figura_legendada(
     [Agendador executando os sistemas de forma cíclica e sequencial.],
     image("../../../imagens/diagrama_agendador.png", height: 30%),
-    [Fonte: Elaboração própria.],
+    [Fonte: elaboração própria.],
 )
 
 ==== Relacionamento de Entidades
@@ -105,7 +105,7 @@ Do mesmo jeito que se adiciona um único componente a uma entidade, como mostra 
     [Representação do relacionamento entre o Sol, a Terra e a Lua.],
     image("../../../imagens/relacionamento_entidades.png", height: 13%),
     [```cs Terra.add(FilhoDe, Sol); Lua.add(FilhoDe, Terra);```],
-    [Fonte: Adaptado de #cite(<entityrelationships>, form: "prose").],
+    [Fonte: adaptado de #cite(<entityrelationships>, form: "prose").],
 )
 
 ==== Depurador de ECS

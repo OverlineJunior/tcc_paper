@@ -18,6 +18,15 @@ agile:
     value: https://www.agilealliance.org/agile101/the-agile-manifesto/
     date: 2025-02-22
 
+reactivex:
+  type: Web
+  title: "RxJS: Reactive Extensions for JavaScript"
+  author: Microsoft
+  date: 2009
+  url:
+    value: https://reactivex.io/
+    date: 2025-06-13
+
 flecs:
   type: Repository
   title: "Flecs: Fast Entity Component System"

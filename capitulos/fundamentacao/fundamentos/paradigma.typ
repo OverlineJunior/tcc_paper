@@ -9,7 +9,7 @@ Os paradigmas são organizados em categorias, podendo ser vistos como uma hierar
 #figura_legendada(
 	[Paradigmas de programação organizados hierarquicamente.],
 	image("../../../imagens/hierarquia_paradigmas.png", height: 35%),
-	[Fonte: Adaptado de #cite(<whatsprogrammingparadigm>, form: "prose").],
+	[Fonte: adaptado de #cite(<whatsprogrammingparadigm>, form: "prose").],
 )
 
 Com base na figura, observa-se a relevância dos paradigmas imperativo e declarativo, já que todos os outros paradigmas derivam, em maior ou menor grau, de um desses dois. Por mais que paradigmas mais específicos possam tomar rumos inesperados, eles ainda terão algum grau de herança dos paradigmas imperativo ou declarativo.
@@ -32,11 +32,4 @@ Com base na definição de paradigma dada pelo dicionário Merriam-Webster:
 
 #quote[That doesn’t quite match ECS. Having deep thoughts about ECS is not the same as having a philosophical framework. Tutorials, documentation and blog posts do not amount to “theories, laws and generalizations”. It is safe to say that the theoretical foundation for ECS is janky at best @ecsparadigm.]
 
-Seguindo a conclusão de #cite(<ecsparadigm>, form: "author"), o ECS não será tratado como um paradigma ao decorrer do projeto, mas sim apenas como um padrão de projeto.
-
-/*
-1. Definição
-2. Visão macro
-3. Visão micro sobre os paradigmas imperativos e declarativos
-4. Por que o ECS não é um paradigma
-*/
+Seguindo a conclusão de #cite(<ecsparadigm>, form: "author"), o ECS não será tratado como um paradigma ao decorrer do projeto, mas sim apenas como um padrão de arquitetura.
