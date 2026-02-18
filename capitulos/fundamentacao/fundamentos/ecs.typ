@@ -1,4 +1,4 @@
-#import "../../../abnt_udc.typ": todo, figura_legendada
+#import "../../../abnt_udc.typ": figura_legendada
 
 ===	Entity Component System
 

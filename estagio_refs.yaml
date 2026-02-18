@@ -1,0 +1,75 @@
+agno:
+  type: web
+  title: Agno Documentation
+  author: Agno
+  url:
+    value: https://docs.agno.com/
+    date: 2025-12-03
+  date: 2025
+
+lewis2020:
+  type: article
+  title: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+  author:
+    - Lewis, Patrick
+    - Perez, Ethan
+    - Piktus, Aleksandra
+    - Petroni, Fabio
+    - Karpukhin, Vladimir
+    - Goyal, Naman
+    - Küttler, Heinrich
+    - Lewis, Mike
+    - Yih, Wen-tau
+    - Rocktäschel, Tim
+    - Riedel, Sebastian
+    - Kiela, Douwe
+  date: 2020
+  url:
+    value: https://arxiv.org/abs/2005.11401
+    date: 2025-12-03
+  organization: Advances in Neural Information Processing Systems 33
+
+n8n:
+  type: web
+  title: n8n Docs
+  author: n8n
+  url:
+    value: https://docs.n8n.io/
+    date: 2025-12-03
+  date: 2025
+
+typst:
+  type: web
+  title: Typst Documentation
+  author: Typst
+  url:
+    value: https://typst.app/docs/
+    date: 2025-12-03
+  date: 2025
+
+pmfi_home:
+  type: web
+  title: "Portal do Município de Foz do Iguaçu"
+  author: "Prefeitura Municipal de Foz do Iguaçu"
+  url:
+    value: https://www.pmfi.pr.gov.br/
+    date: 2025-12-03
+  date: 2025
+
+pmfi_historia:
+  type: web
+  title: "Cronologia Histórica de Foz do Iguaçu"
+  author: "Prefeitura Municipal de Foz do Iguaçu"
+  url:
+    value: https://www.pmfi.pr.gov.br/cidade/cronologia
+    date: 2025-12-03
+  date: 2025
+
+pmfi_stim:
+  type: web
+  title: "Secretaria Municipal de Tecnologia, Inovação e Modernização Digital"
+  author: "Prefeitura Municipal de Foz do Iguaçu"
+  url:
+    value: https://www.pmfi.pr.gov.br/secretaria/tecnologia-inovacao-modernizacao-digital
+    date: 2025-12-03
+  date:

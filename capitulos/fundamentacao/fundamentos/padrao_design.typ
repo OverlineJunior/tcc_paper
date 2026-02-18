@@ -1,5 +1,3 @@
-#import "../../../abnt_udc.typ": todo
-
 === Padrão de Design de Software
 
 Um padrão de design de software (do inglês, _software design pattern_) é uma solução reutilizável para um determinado problema recorrente no design de software. Esses padrões são descrições gerais de como resolver tais problemas, e não implementações específicas.

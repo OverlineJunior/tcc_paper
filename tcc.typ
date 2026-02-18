@@ -1,4 +1,4 @@
-#import "abnt_udc.typ": abnt_udc, capa, folha_de_rosto
+#import "abnt_udc.typ": *
 #import "@preview/codly:1.3.0": codly-init
 
 #show: abnt_udc
@@ -6,13 +6,21 @@
 
 #let autor = "Francisco Sebastiany Junior"
 #let orientador = "Prof. Me. Luciano S. Cardoso"
-#let titulo = "Design e Implementação de um Protótipo de Interpretador para uma Linguagem de Programação Orientada ao Entity Component System"
-#let local = "Foz do Iguaçu, PR"
+#let titulo = "Implementação de um Protótipo de Interpretador para uma Linguagem de Programação Orientada ao Entity Component System"
+#let curso = "Ciência da Computação"
+#let natureza = [Trabalho de Conclusão de Curso apresentado como requisito obrigatório para obtenção do título de Bacharel em #curso do Centro Universitário Dinâmica das Cataratas.]
+#let local = "Foz do Iguaçu"
 #let data = "2025"
 
-#capa(autor, titulo, local, data)
+#figura(
+	[Exemplo.],
+	image("imagens/mapa_interpretador.png"),
+	[Elaboração própria.]
+)
 
-#folha_de_rosto(autor, titulo, orientador, local, data)
+#capa(autor, titulo, curso, local, data)
+
+#folha_de_rosto(autor, orientador, titulo, natureza, local, data)
 
 #outline(title: "Lista de Figuras", target: figure.where(kind: image))
 
@@ -21,6 +29,40 @@
 #outline(title: "Lista de Códigos", target: figure.where(kind: raw))
 
 #outline(title: "Sumário")
+
+= .........\_
+
+\_
+
+----------------------------------------
+
+= ...\_
+
+== \_
+
+----------------------------------------
+
+\_
+
+\_
+
+----------------------------------------
+
+\_
+
+= .........\_
+
+----------------------------------------
+
+== .......\_
+
+\_
+
+----------------------------------------
+
+== ..\_
+
+=== \_
 
 #include "capitulos/introducao.typ"
 
