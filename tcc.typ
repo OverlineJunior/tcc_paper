@@ -1,10 +1,7 @@
 #import "abnt_udc.typ": *
 #import "@preview/codly:1.3.0": codly-init
 
-#show: abnt_udc
-#show: codly-init.with()
-
-#let autor = "Francisco Sebastiany Junior"
+#let aluno = "Francisco Sebastiany Junior"
 #let orientador = "Prof. Me. Luciano S. Cardoso"
 #let titulo = "Implementação de um Protótipo de Interpretador para uma Linguagem de Programação Orientada ao Entity Component System"
 #let curso = "Ciência da Computação"
@@ -12,51 +9,16 @@
 #let local = "Foz do Iguaçu"
 #let data = "2025"
 
-#capa(autor, titulo, curso, local, data)
-
-#folha_de_rosto(autor, orientador, titulo, natureza, local, data)
-
-#outline(title: "Lista de Figuras", target: figure.where(kind: image))
-
-#outline(title: "Lista de Tabelas e Quadros", target: figure.where(kind: table))
-
-#outline(title: "Lista de Códigos", target: figure.where(kind: raw))
-
-#sumario()
-
-= .........\_
-
-\_
-
-----------------------------------------
-
-= ...\_
-
-== \_
-
-----------------------------------------
-
-\_
-
-\_
-
-----------------------------------------
-
-\_
-
-= .........\_
-
-----------------------------------------
-
-== .......\_
-
-\_
-
-----------------------------------------
-
-== ..\_
-
-=== \_
+#show: abnt_udc.with(
+  titulo,
+  aluno,
+  curso,
+  orientador,
+  natureza,
+  local,
+  data,
+)
+#show: codly-init
 
 #include "capitulos/introducao.typ"
 

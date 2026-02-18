@@ -18,15 +18,23 @@
 
 #let MARGENS = (top: 3cm, bottom: 3cm, left: 3cm, right: 2cm)
 
-#let abnt_udc(body) = [
+#let abnt_udc(
+  titulo,
+  aluno,
+  curso,
+  orientador,
+  natureza,
+  local,
+  data,
+  body,
+) = [
   #set page(
+    // ------------------------------------------------------------------------
+    // Regras de Estilo
+    // ------------------------------------------------------------------------
+    
     paper: "a4",
-    margin: (
-      top: 3cm,
-      bottom: 3cm,
-      left: 3cm,
-      right: 2cm,
-    ),
+    margin: MARGENS,
     // A numeração só é mostrada após o sumário.
     header: context {
       let fim_sumario = query(<fim_sumario>)
@@ -34,7 +42,7 @@
         let fim_pag = fim_sumario.first().location().page()
         if here().page() >= fim_pag {
           set align(right)
-          set text(size: 10pt)
+          set text(size: TAMANHOS_FONTE.minusculo)
           counter(page).display("1")
         }
       }
@@ -209,99 +217,86 @@
       rect[], rect[#it],
     )
   }
+  
+  // ------------------------------------------------------------------------
+  // Componentes
+  // ------------------------------------------------------------------------
 
-  //#set block(stroke: black)
+  #let capa(aluno, titulo, curso, local, data) = [
+    #set par(justify: false)
+    #set align(center)
+    #set rect(width: 100%, height: 100%, stroke: none)
+  
+    #grid(
+      columns: 1,
+      rows: (0.75fr, 0.6fr, 1fr, 1fr),
+      rect[
+        #set text(size: TAMANHOS_FONTE.grande, weight: "bold")
+        #upper[Centro Universitário Dinâmica das Cataratas] \
+        #upper[Curso de #curso]
+      ],
+      rect[#text(size: TAMANHOS_FONTE.corpo)[#upper(aluno)]],
+      rect[#upper(text(size: TAMANHOS_FONTE.grande, weight: "bold")[#titulo])],
+      rect[
+        #set text(size: TAMANHOS_FONTE.pequeno)
+        #set align(bottom)
+        #upper(local) \
+        #data
+      ],
+    )
+  
+    #pagebreak()
+  ]
+  
+  #let folha_de_rosto(aluno, orientador, titulo, natureza, local, data) = [
+    #set par(justify: false)
+    #set align(center)
+    #set rect(width: 100%, height: 100%, stroke: none)
+  
+    #grid(
+      columns: 1,
+      rows: (2.5fr, 1.5fr, 1.5fr, 2fr),
+      rect[#text(size: TAMANHOS_FONTE.corpo)[#upper(aluno)]],
+      rect[#text(size: TAMANHOS_FONTE.grande)[#upper(titulo)]],
+      grid(
+        columns: (1fr, 1fr),
+        rows: 1,
+        [],
+        rect[#align(left)[#text(
+          size: TAMANHOS_FONTE.minusculo,
+        )[
+          #set par(leading: 0.4em)
+          #natureza \ \
+          Orientador: #orientador
+        ]]],
+      ),
+      rect[#align(bottom)[#text(size: TAMANHOS_FONTE.pequeno)[ #upper(local) \ #data]]],
+    )
+  
+    #pagebreak()
+  ]
+  
+  // ------------------------------------------------------------------------
+  // Conteúdo
+  // ------------------------------------------------------------------------
+  
+  #capa(aluno, titulo, curso, local, data)
+  
+  #folha_de_rosto(aluno, orientador, titulo, natureza, local, data)
+  
+  #outline(title: "Lista de Figuras", target: figure.where(kind: image))
+  
+  #outline(title: "Lista de Tabelas e Quadros", target: figure.where(kind: table))
+  
+  #outline(title: "Lista de Códigos", target: figure.where(kind: raw))
+  
+  #outline(title: "Sumário")
+  #metadata("fim_sumario") <fim_sumario>
 
   #body
 ]
 
-#let capa(autor, titulo, curso, local, data) = [
-  #set par(justify: false)
-  #set align(center)
-  #set rect(width: 100%, height: 100%, stroke: none)
-
-  #grid(
-    columns: 1,
-    rows: (0.75fr, 0.6fr, 1fr, 1fr),
-    rect[
-      #set text(size: TAMANHOS_FONTE.grande, weight: "bold")
-      #upper[Centro Universitário Dinâmica das Cataratas] \
-      #upper[Curso de #curso]
-    ],
-    rect[#text(size: TAMANHOS_FONTE.corpo)[#upper(autor)]],
-    rect[#upper(text(size: TAMANHOS_FONTE.grande, weight: "bold")[#titulo])],
-    rect[
-      #set text(size: TAMANHOS_FONTE.pequeno)
-      #set align(bottom)
-      #upper(local) \
-      #data
-    ],
-  )
-
-  #pagebreak()
-]
-
-#let folha_de_rosto(autor, orientador, titulo, natureza, local, data) = [
-  #set par(justify: false)
-  #set align(center)
-  #set rect(width: 100%, height: 100%, stroke: none)
-
-  #grid(
-    columns: 1,
-    rows: (2.5fr, 1.5fr, 1.5fr, 2fr),
-    rect[#text(size: TAMANHOS_FONTE.corpo)[#upper(autor)]],
-    rect[#text(size: TAMANHOS_FONTE.grande)[#upper(titulo)]],
-    grid(
-      columns: (1fr, 1fr),
-      rows: 1,
-      [],
-      rect[#align(left)[#text(
-        size: TAMANHOS_FONTE.minusculo,
-      )[
-        #set par(leading: 0.4em)
-        #natureza \ \
-        Orientador: #orientador
-      ]]],
-    ),
-    rect[#align(bottom)[#text(size: TAMANHOS_FONTE.pequeno)[ #upper(local) \ #data]]],
-  )
-
-  #pagebreak()
-]
-
 #let figura(titulo, imagem, fonte) = {
-  /*
-  #show figure.where(kind: image): set figure(supplement: [Figura])
-  #show figure.where(kind: table): set figure(supplement: [Tabela])
-  #show figure.where(kind: raw): set figure(supplement: [Código])
-
-  #set figure.caption(position: top, separator: [ — ])
-
-  // Blocos de código podem atravessar páginas.
-  #show figure.where(kind: raw): set block(breakable: true)
-  */
-
-  /*
-  Lista de itens.
-  Por algum motivo, não consegui fazer um selector só para os vários tipos de figura.
-  #let entry_de_figura(entry) = link(
-    entry.element.location(),
-    entry.indented([*#entry.prefix().*], entry.inner()),
-  )
-  #show outline.where(target: selector(figure.where(kind: image))): it => {
-    show outline.entry: it => entry_de_figura(it)
-    it
-  }
-  #show outline.where(target: selector(figure.where(kind: table))): it => {
-    show outline.entry: it => entry_de_figura(it)
-    it
-  }
-  #show outline.where(target: selector(figure.where(kind: raw))): it => {
-    show outline.entry: it => entry_de_figura(it)
-    it
-  }
-  */
-
   set figure(caption: titulo, gap: 0.7em, supplement: [FIGURA])
   set figure.caption(position: top, separator: [ — ])
   set stack(dir: ttb, spacing: 0.7em)
@@ -343,8 +338,3 @@
     panic("Número de legendas não suportado.")
   }
 }
-
-#let sumario() = [
-  #outline(title: "Sumário")
-  #metadata("fim_sumario") <fim_sumario>
-]
