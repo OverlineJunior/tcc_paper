@@ -27,12 +27,18 @@
       left: 3cm,
       right: 2cm,
     ),
-    // TODO! Mostrar só depois do sumário.
-    header: context [
-      #set align(right)
-      #set text(size: TAMANHOS_FONTE.minusculo)
-      #counter(page).display("1")
-    ],
+    // A numeração só é mostrada após o sumário.
+    header: context {
+      let fim_sumario = query(<fim_sumario>)
+      if fim_sumario.len() > 0 {
+        let fim_pag = fim_sumario.first().location().page()
+        if here().page() >= fim_pag {
+          set align(right)
+          set text(size: 10pt)
+          counter(page).display("1")
+        }
+      }
+    }
   )
 
   #set text(
@@ -337,3 +343,8 @@
     panic("Número de legendas não suportado.")
   }
 }
+
+#let sumario() = [
+  #outline(title: "Sumário")
+  #metadata("fim_sumario") <fim_sumario>
+]

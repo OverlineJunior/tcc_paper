@@ -12,12 +12,6 @@
 #let local = "Foz do Iguaçu"
 #let data = "2025"
 
-#figura(
-	[Exemplo.],
-	image("imagens/mapa_interpretador.png"),
-	[Elaboração própria.]
-)
-
 #capa(autor, titulo, curso, local, data)
 
 #folha_de_rosto(autor, orientador, titulo, natureza, local, data)
@@ -28,7 +22,7 @@
 
 #outline(title: "Lista de Códigos", target: figure.where(kind: raw))
 
-#outline(title: "Sumário")
+#sumario()
 
 = .........\_
 
